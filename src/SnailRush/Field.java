@@ -62,13 +62,14 @@ public class Field {
 
     /**
      * <p>ダミーデータ生成</p>
-     * */
+     */
     private void createDummyData() {
         init = new InitialSetting();
 
         /*エージェント生成*/
         for (int i = 0; i < Const.AGENT_NUMBER.get(); i++) {
-            agent[i] = new Agent(i / 2 == 0 ? Owner.Red:Owner.Blue, agentPosX[i], agentPosY[i]);
+            Owner team = (i / 2 == 0) ? Owner.Red : Owner.Blue;
+            agent[i] = new Agent(team, agentPosX[i], agentPosY[i]);
         }
 
         /*パネル生成*/
@@ -148,8 +149,8 @@ public class Field {
             agentPosY[3] = agentPosY[1];
 
             for (int i = 0; i < Const.AGENT_NUMBER.get(); i++) {
-                System.out.println("AgentposX[" + i + "]" + agentPosX[i]);
-                System.out.println("AgentposY[" + i + "]" + agentPosY[i]);
+                System.out.println("agentPosX[" + i + "]" + agentPosX[i]);
+                System.out.println("agentPosY[" + i + "]" + agentPosY[i]);
             }
         }
     }
