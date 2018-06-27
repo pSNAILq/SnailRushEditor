@@ -89,7 +89,7 @@ public class Field {
      */
     public void display() {
         displayPanels();
-        displayAgents();
+//        displayAgents();
     }
 
     /**
